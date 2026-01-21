@@ -94,10 +94,13 @@ When explaining numbered elements in diagrams (e.g., architecture diagrams, flow
 ### Usage
 
 - Use filled circled numbers when referencing numbered callouts in diagrams
+- **Bold the circled numbers** when used in tables for better visibility (e.g., `| **❶** | Description |`)
 - Each numbered item should be on its own paragraph (add blank line between items)
 - Numbers in diagrams should match the filled style for visual consistency
 
 ### Example
+
+In prose/paragraphs:
 
 ```markdown
 ![Architecture diagram](./images/architecture.png)
@@ -107,6 +110,15 @@ When explaining numbered elements in diagrams (e.g., architecture diagrams, flow
 ❷ The gateway routes the request to the appropriate service.
 
 ❸ The service processes the request and returns a response.
+```
+
+In tables (use bold):
+
+```markdown
+| # | Component | Description |
+|---|-----------|-------------|
+| **❶** | **API Gateway** | Routes incoming requests to services |
+| **❷** | **Backend Service** | Processes the request |
 ```
 
 ## Color scheme
