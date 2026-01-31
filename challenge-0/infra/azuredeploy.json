@@ -15,7 +15,8 @@
       "allowedValues": [
         "swedencentral",
         "francecentral",
-        "eastus2"
+        "eastus2",
+        "germanywestcentral"
       ],
       "metadata": {
         "description": "Azure location where resources should be deployed"
@@ -389,16 +390,16 @@
     {
       "type": "Microsoft.CognitiveServices/accounts/deployments",
       "apiVersion": "2025-04-01-preview",
-      "name": "[format('{0}/{1}', variables('aiFoundryName'), 'text-embedding-ada-002')]",
+      "name": "[format('{0}/{1}', variables('aiFoundryName'), 'text-embedding-3-large')]",
       "sku": {
         "capacity": 10,
         "name": "Standard"
       },
       "properties": {
         "model": {
-          "name": "text-embedding-ada-002",
+          "name": "text-embedding-3-large",
           "format": "OpenAI",
-          "version": "2"
+          "version": "1"
         }
       },
       "dependsOn": [
